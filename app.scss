@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+* {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.mat-icon {
+  font-family: 'Material Icons' !important;
+  font-style: normal;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Авторизація */
+.login-container { display: flex; justify-content: center; align-items: center; height: 100vh; width: 100vw; background: #f4f6f9; }
+.login-card { background: white; padding: 40px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); width: 100%; max-width: 400px; text-align: center; }
+.login-card h2 { font-size: 26px; color: #1e293b; font-weight: 700; margin-bottom: 6px; }
+.subtitle { color: #64748b; font-size: 14px; margin-bottom: 24px; }
+.full-width { width: 100%; margin-bottom: 12px; }
+.password-field { margin-bottom: 20px; position: relative; }
+.custom-error-hint { color: #ba1a1a; font-size: 12px; position: absolute; left: 14px; bottom: -18px; }
+.forgot-password-row { display: flex; justify-content: center; margin-bottom: 16px; }
+.forgot-password-btn { color: #7c4dff !important; font-size: 14px !important; }
+
+.login-btn { 
+  background-color: #ebd1eb !important; 
+  color: #6a1b9a !important; 
+  padding: 24px !important; 
+  font-size: 16px !important; 
+  font-weight: 500 !important; 
+  border-radius: 25px !important; 
+  letter-spacing: 1px;
+}
+.toggle-text { margin-top: 24px; color: #64748b; font-size: 14px; .toggle-mode-btn { color: #7c4dff !important; font-weight: 600; } }
+
+/* Хедер */
+.main-layout { min-height: 100vh; background-color: #f4f6f9; }
+.main-header {
+  background-color: #212936 !important; 
+  color: white !important;
+  display: flex;
+  align-items: center;
+  height: 64px;
+  padding: 0 24px !important;
+  box-sizing: border-box;
+}
+.brand-title { font-size: 18px; font-weight: 500; color: #ffffff; cursor: pointer; }
+.toolbar-spacer { flex: 1; }
+
+/* Інпут пошуку з інтегрованою кнопкою-перемикачем */
+.center-search-box {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 20px;
+  width: 500px;
+  padding: 2px 4px 2px 14px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+
+  .search-box-icon { color: #475569; margin-right: 8px; font-size: 20px; width: 20px; height: 20px; }
+  
+  &.ai-active-border {
+    border-color: #7c4dff; /* Фіолетове підсвічування, коли увімкнено ШІ */
+    .search-box-icon { color: #7c4dff; }
+  }
+
+  .search-box-input {
+    border: none;
+    background: transparent;
+    font-size: 13px;
+    color: #1f2937;
+    width: 100%;
+    outline: none;
+    &::placeholder { color: #9ca3af; }
+  }
+  .search-clear-btn { color: #9ca3af; width: 28px; height: 28px; line-height: 28px; margin-right: 4px; mat-icon { font-size: 16px; } }
+}
+
+/* Кнопка зміни режиму пошуку */
+.search-mode-toggle {
+  border: none;
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 16px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+
+  &:hover { background: #e2e8f0; }
+
+  &.ai-mode-on {
+    background: #7c4dff;
+    color: #ffffff;
+  }
+}
+
+/* Профіль */
+.user-profile-zone { display: flex; align-items: center; gap: 8px; max-width: 220px; overflow: hidden; }
+.profile-email-text { font-size: 13px; color: #94a3b8; font-weight: 400; white-space: nowrap; }
+.logout-top-btn { color: #ffffff !important; }
+
+/* Таблиці та контент */
+.content-container { max-width: 1140px; margin: 0 auto; padding: 24px; }
+.content-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; h1 { font-size: 26px; font-weight: 700; color: #0f172a; margin: 0; } }
+
+.add-proj-btn { 
+  background-color: #66bb6a !important; 
+  color: white !important; 
+  font-weight: 500 !important; 
+  border-radius: 20px !important; 
+  padding: 0 16px !important;
+}
+
+.table-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.02); }
+.full-width-table { width: 100%; }
+tr.mat-mdc-header-row { background-color: #f8fafc; }
+th.mat-mdc-header-cell { color: #475569 !important; font-weight: 600 !important; font-size: 13px; padding: 16px !important; }
+td.mat-mdc-cell { font-size: 14px; color: #334155; padding: 16px !important; }
+tr.mat-mdc-row:hover { background-color: #f8fafc; cursor: pointer; }
+.project-name-cell { font-weight: 600; color: #3f51b5 !important; }
+.center-text { text-align: center !important; }
+.action-folder-button { color: #475569 !important; }
+
+.back-nav { margin-bottom: 20px; }
+.back-to-list-btn {
+  background-color: #e8eaf6 !important; 
+  color: #3f51b5 !important;
+  border-radius: 20px !important;
+  font-weight: 500 !important;
+  padding: 0 16px !important;
+  box-shadow: none !important;
+  mat-icon { margin-right: 4px; font-size: 18px; width: 18px; height: 18px; }
+}
+
+/* Деталі та Markdown редактор */
+.project-details-card {
+  display: flex; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  .project-details-img { width: 360px; height: 240px; object-fit: cover; }
+  .project-details-info { padding: 28px; width: 100%; h2 { font-size: 24px; color: #0f172a; margin: 0 0 12px 0; font-weight: 700; } .project-desc-text { font-size: 14px; color: #475569; line-height: 1.6; margin: 0; } .meta-badge { display: inline-block; background: #e0e7ff; color: #4338ca; padding: 4px 12px; border-radius: 12px; font-size: 12px; margin-top: 16px; font-weight: 500; } }
+}
+
+.markdown-editor-zone { width: 100%; display: flex; flex-direction: column; gap: 6px; }
+.custom-markdown-textarea {
+  width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px;
+  font-family: 'Courier New', Courier, monospace !important; font-size: 14px; color: #1e293b;
+  outline: none; resize: vertical; box-sizing: border-box;
+  &:focus { border-color: #3f51b5; box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.1); }
+}
+
+.custom-files-table {
+  width: 100%; border-collapse: collapse;
+  th { background-color: #f8fafc; color: #475569; font-weight: 600; text-align: left; padding: 16px; font-size: 13px; }
+  td { padding: 16px; border-bottom: 1px solid #f1f5f9; font-size: 14px; color: #334155; }
+  .file-name-cell { display: flex; align-items: center; gap: 8px; font-weight: 500; mat-icon { color: #64748b; } }
+  .author-tag { background: #f1f5f9; padding: 2px 8px; border-radius: 4px; font-size: 12px; color: #475569; }
+}
